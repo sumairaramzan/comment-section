@@ -1,18 +1,22 @@
-import React from "react";
-
-import logo from "Images/logo.svg";
+import React, { useState } from "react";
 import classes from "./index.module.scss";
+import CommentSection from "Components/CommentSection";
+import ReplySection from "Components/ReplySection";
 
 const LandingPage = () => {
+  const [comments, setComments] = useState([]);
   return (
     <div className={classes.app}>
-      <header className={classes.appHeader}>
-        <img src={logo} className={classes.appLogo} alt="logo" />
-        <p>React Redux Boilerplate</p>
-        <a className={classes.appLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <CommentSection comments={comments} setComments={setComments} />
+      {comments.map((comment, index) => (
+        <ReplySection
+          key={index}
+          parentIndex={index}
+          comments={comments}
+          setComments={setComments}
+        />
+      ))}
+     
     </div>
   );
 };

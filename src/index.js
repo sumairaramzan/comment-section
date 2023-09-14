@@ -4,6 +4,9 @@ import App from "Containers/App";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "./configureStore";
+import "bootstrap/dist/css/bootstrap.min.css";
+/* Import the Font Awesome CSS */
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

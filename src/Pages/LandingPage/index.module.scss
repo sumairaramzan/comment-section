@@ -1,5 +1,6 @@
 .app {
-  text-align: center;
+  // text-align: center;
+
   .appHeader {
     background-color: #282c34;
     min-height: 100vh;
@@ -9,6 +10,7 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+
     .appLogo {
       height: 40vmin;
       pointer-events: none;
@@ -19,6 +21,7 @@
         animation: appLogoSpin infinite 20s linear;
       }
     }
+
     .appLink {
       color: #61dafb;
     }
@@ -27,6 +30,7 @@
       from {
         transform: rotate(0deg);
       }
+
       to {
         transform: rotate(360deg);
       }
